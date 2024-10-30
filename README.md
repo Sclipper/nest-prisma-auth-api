@@ -64,10 +64,16 @@ services:
 
 2. Environment Variables:
 
-- Copy .env.example to .env and set up any required environment variables, such as the database URL:
+- Copy the bellow config into the `.env` file and replace the values with your own:
 
-```bash
-cp .env.example .env
+```
+DATABASE_URL="postgresql://sclipper:postgres@111.111.111.111:5433/{{database_name}}"
+
+JWT_ACCESS_TOKEN_SECRET=any_random_string
+JWT_ACCESS_TOKEN_EXPIRATION_MS=3600000 #1 hour
+
+JWT_REFRESH_TOKEN_SECRET=another_random_string
+JWT_REFRESH_TOKEN_EXPIRATION_MS=604800000 #7 days
 ```
 
 3.  Install Dependencies:
